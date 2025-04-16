@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install rust-src
+        run: rustup component add rust-src
+
       - name: Set up Rust
         uses: dtolnay/rust-toolchain@stable
         with:
